@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController interfaceStyle="light" id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPN-Bg-F0Y">
+                                <rect key="frame" x="0.0" y="44" width="414" height="313.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="bkM-En-uS7">
+                                        <rect key="frame" x="124" y="157" width="166" height="156.5"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="bkM-En-uS7" firstAttribute="height" secondItem="SPN-Bg-F0Y" secondAttribute="height" multiplier="0.5" id="DsY-qV-c3v"/>
+                                    <constraint firstItem="bkM-En-uS7" firstAttribute="centerX" secondItem="SPN-Bg-F0Y" secondAttribute="centerX" id="ONg-ht-ZyB"/>
+                                    <constraint firstItem="bkM-En-uS7" firstAttribute="bottom" secondItem="SPN-Bg-F0Y" secondAttribute="bottom" id="Oiv-YW-nUT"/>
+                                    <constraint firstItem="bkM-En-uS7" firstAttribute="width" secondItem="SPN-Bg-F0Y" secondAttribute="width" multiplier="0.4" id="onb-S2-HzH"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume Builder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llz-om-ubc">
+                                <rect key="frame" x="84" y="401.5" width="246" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Fdh-IO-Xdo"/>
+                                    <constraint firstAttribute="width" constant="246" id="bqh-X1-axT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Solution to build a Professional Resume" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svG-PH-ty9">
+                                <rect key="frame" x="27.5" y="438.5" width="359" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="NI9-KE-qet"/>
+                                    <constraint firstAttribute="width" constant="359" id="xUO-bi-maa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="apSwipeBackground"/>
+                        <constraints>
+                            <constraint firstItem="Llz-om-ubc" firstAttribute="top" secondItem="SPN-Bg-F0Y" secondAttribute="bottom" multiplier="1.1" constant="8" symbolic="YES" id="4lD-Jg-WAP"/>
+                            <constraint firstItem="SPN-Bg-F0Y" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.35" id="JIg-aq-HMD"/>
+                            <constraint firstItem="Llz-om-ubc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Kgy-LP-BeB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SPN-Bg-F0Y" secondAttribute="trailing" id="VHy-Ek-aL2"/>
+                            <constraint firstItem="svG-PH-ty9" firstAttribute="top" secondItem="Llz-om-ubc" secondAttribute="bottom" id="bEV-JL-afC"/>
+                            <constraint firstItem="svG-PH-ty9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gtd-u8-pcW"/>
+                            <constraint firstItem="SPN-Bg-F0Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iQB-7c-oRf"/>
+                            <constraint firstItem="SPN-Bg-F0Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w40-VK-DcG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="140" height="141"/>
+        <namedColor name="apSwipeBackground">
+            <color red="0.89803921568627454" green="0.59607843137254901" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

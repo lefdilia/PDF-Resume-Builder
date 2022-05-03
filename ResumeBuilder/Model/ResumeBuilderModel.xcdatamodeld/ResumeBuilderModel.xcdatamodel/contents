@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Accomplishments" representedClassName="Accomplishments" syncable="YES" codeGenerationType="class">
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="text" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="accomplishments" inverseEntity="Initial"/>
+    </entity>
+    <entity name="AdditionalInformation" representedClassName="AdditionalInformation" syncable="YES" codeGenerationType="class">
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="additionalInformation" inverseEntity="Initial"/>
+    </entity>
+    <entity name="Certifications" representedClassName="Certifications" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="orderIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="certifications" inverseEntity="Initial"/>
+    </entity>
+    <entity name="ContactInformations" representedClassName="ContactInformations" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" attributeType="String"/>
+        <attribute name="lastName" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Binary"/>
+        <attribute name="profession" optional="YES" attributeType="String"/>
+        <attribute name="socialLinks" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String:String]"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="zipCode" optional="YES" attributeType="String"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="contactInformations" inverseEntity="Initial"/>
+    </entity>
+    <entity name="CustomSection" representedClassName="CustomSection" syncable="YES" codeGenerationType="class">
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="customSection" inverseEntity="Initial"/>
+    </entity>
+    <entity name="Education" representedClassName="Education" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="degree" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="field" optional="YES" attributeType="String"/>
+        <attribute name="orderIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="schoolName" attributeType="String"/>
+        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="education" inverseEntity="Initial"/>
+    </entity>
+    <entity name="Initial" representedClassName="Initial" syncable="YES" codeGenerationType="class">
+        <attribute name="color" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" defaultDateTimeInterval="665924880" usesScalarValueType="NO"/>
+        <attribute name="font" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="format" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="identifier" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="imageType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" customClassName="ImageType"/>
+        <attribute name="initialType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="template" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" customClassName="TemplatesType"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="accomplishments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Accomplishments" inverseName="initialObject" inverseEntity="Accomplishments"/>
+        <relationship name="additionalInformation" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AdditionalInformation" inverseName="initialObject" inverseEntity="AdditionalInformation"/>
+        <relationship name="certifications" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Certifications" inverseName="initialObject" inverseEntity="Certifications"/>
+        <relationship name="contactInformations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ContactInformations" inverseName="initialObject" inverseEntity="ContactInformations"/>
+        <relationship name="customSection" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CustomSection" inverseName="initialObject" inverseEntity="CustomSection"/>
+        <relationship name="education" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Education" inverseName="initialObject" inverseEntity="Education"/>
+        <relationship name="interests" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Interests" inverseName="initialObject" inverseEntity="Interests"/>
+        <relationship name="languages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Languages" inverseName="initialObject" inverseEntity="Languages"/>
+        <relationship name="skills" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Skills" inverseName="initialObject" inverseEntity="Skills"/>
+        <relationship name="softwares" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Softwares" inverseName="initialObject" inverseEntity="Softwares"/>
+        <relationship name="summary" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Summary" inverseName="initialObject" inverseEntity="Summary"/>
+        <relationship name="workExperiences" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="WorkExperiences" inverseName="initialObject" inverseEntity="WorkExperiences"/>
+    </entity>
+    <entity name="Interests" representedClassName="Interests" syncable="YES" codeGenerationType="class">
+        <attribute name="orderIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="interests" inverseEntity="Initial"/>
+    </entity>
+    <entity name="Languages" representedClassName="Languages" syncable="YES" codeGenerationType="class">
+        <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="orderIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="languages" inverseEntity="Initial"/>
+    </entity>
+    <entity name="Skills" representedClassName="Skills" syncable="YES" codeGenerationType="class">
+        <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="orderIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="skills" inverseEntity="Initial"/>
+    </entity>
+    <entity name="Softwares" representedClassName="Softwares" syncable="YES" codeGenerationType="class">
+        <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="orderIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="softwares" inverseEntity="Initial"/>
+    </entity>
+    <entity name="Summary" representedClassName="Summary" syncable="YES" codeGenerationType="class">
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="summary" inverseEntity="Initial"/>
+    </entity>
+    <entity name="WorkExperiences" representedClassName="WorkExperiences" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="company" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="jobTitle" attributeType="String"/>
+        <attribute name="orderIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="responsibilities" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO" customClassName="rangeDate"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <relationship name="initialObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Initial" inverseName="workExperiences" inverseEntity="Initial"/>
+    </entity>
+    <elements>
+        <element name="Education" positionX="-63" positionY="-18" width="128" height="179"/>
+        <element name="Interests" positionX="-54" positionY="-9" width="128" height="89"/>
+        <element name="AdditionalInformation" positionX="-36" positionY="9" width="128" height="74"/>
+        <element name="ContactInformations" positionX="-18" positionY="27" width="128" height="239"/>
+        <element name="CustomSection" positionX="0" positionY="45" width="128" height="89"/>
+        <element name="Initial" positionX="18" positionY="63" width="128" height="359"/>
+        <element name="Languages" positionX="36" positionY="81" width="128" height="104"/>
+        <element name="Summary" positionX="-9" positionY="36" width="128" height="74"/>
+        <element name="WorkExperiences" positionX="0" positionY="45" width="128" height="179"/>
+        <element name="Accomplishments" positionX="9" positionY="54" width="128" height="74"/>
+        <element name="Certifications" positionX="18" positionY="63" width="128" height="104"/>
+        <element name="Skills" positionX="27" positionY="72" width="128" height="104"/>
+        <element name="Softwares" positionX="36" positionY="81" width="128" height="104"/>
+    </elements>
+</model>
